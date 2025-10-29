@@ -1,0 +1,38 @@
+{
+  "name": "notification-microservice",
+  "version": "1.0.0",
+  "description": "Node.js microservice for consuming Kafka messages and sending emails",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node test-scripts/test-kafka-connection.js all",
+    "test:kafka": "node test-scripts/test-kafka-connection.js all",
+    "test:send": "node test-scripts/send-test-message.js all",
+    "test:single": "node test-scripts/send-test-message.js single",
+    "test:multiple": "node test-scripts/send-test-message.js multiple",
+    "test:invalid": "node test-scripts/send-test-message.js invalid"
+  },
+  "keywords": [
+    "nodejs",
+    "kafka",
+    "email",
+    "microservice",
+    "notification"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "nodemailer": "^6.9.8",
+    "aws-sdk": "^2.1499.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
